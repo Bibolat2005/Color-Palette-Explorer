@@ -1,6 +1,6 @@
 <h1>Color Palette Explorer</h1>
-The project was developed as part of the second stage of selection in the nFactorial incubator.
-   I made a box at the top of the web page then I made a display. Colors can be seen in its display. Whenever you create a gradient using two colors, that color can be seen in the display. Then I made a box in which the color code can be found.
+The project was developed as part of the second stage of selection in the nFactorial incubator.<br>
+   I made a box at the top of the web page then I made a display. Colors can be seen in its display. Whenever you create a gradient using two colors, that color can be seen in the display. Then I made a box in which the color code can be found.<br>
    When you input the color of your choice between the two-color input spaces. Then the colors can be seen in the display by connecting them with each other. You can select the angle of your choice using this select box. According to which angle the two colors will be connected to each other
    I did it step by step:
 1.Basic structure of Gradient Generator
