@@ -50,7 +50,7 @@ body {
   margin: 10px;
   margin-top: 20px;
 }
-/* .color3{
+.color3{
   width: 70px;
   height: 40px;
   float: left;
@@ -67,21 +67,21 @@ body {
   margin-top: 10px;
   margin-left: -80px;
    
-} */
+}
 
-/* select{
+select{
   float: right;
   margin-top: -45px;
   width: 130px;
   height: 35px;
- } */
-
+ }
+/* 
  select{
   float: right;
   margin-top: 25px;
   width: 130px;
   height: 35px;
- }
+ } */
 
  .random-color button {
   margin-top: 15px;
