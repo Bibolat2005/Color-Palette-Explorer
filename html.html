@@ -13,9 +13,6 @@
         <div class="codess"></div>
         <input type="color" class="color1" name="color1" value="#FFAAAA">
         <input type="color" class="color2" name="color2" value="#734C8F">
-        <!-- <input type="color" class="color3" name="color3" value="#ff0000">
-        <input type="color" class="color4" name="color4" value="#0000FF"> -->
-
         <select name="toDirection">
             <option value="to right">to right</option>
             <option value="to right bottom">to right bottom</option>
@@ -25,45 +22,61 @@
             <option value="to left top">to left top</option>
             <option value="to bottom">to bottom</option>
             <option value="to top">to top</option>
-        </select>    
+        </select>
+        <button onclick="changeBrightness(-0.1)">Darken</button>
+        <button onclick="changeBrightness(0.2)">Brighten</button>
     </div>
 
     <script type="text/javascript">
-    var css = document.querySelector(".codess")
-    var color1 = document.querySelector(".color1")
-    var color2 = document.querySelector(".color2")
-    // var color3 = document.querySelector(".color3")
-    // var color4 = document.querySelector(".color4")
-    var bodys = document.getElementById("gradient")
-    var linearDirection = document.getElementsByName("toDirection")[0]
+        var css = document.querySelector(".codess")
+        var color1 = document.querySelector(".color1")
+        var color2 = document.querySelector(".color2")
+        var bodys = document.getElementById("gradient")
+        var linearDirection = document.getElementsByName("toDirection")[0]
 
-    function currentSettings() {
-    var CSSprop = window.getComputedStyle(bodys,null).getPropertyValue("background-image")
-    css.textContent = CSSprop
-}
-currentSettings()
+        function currentSettings() {
+            var CSSprop = window.getComputedStyle(bodys,null).getPropertyValue("background-image")
+            css.textContent = CSSprop
+        }
 
-function returnColor(){
+        currentSettings()
+
+        function returnColor(){
             bodys.style.background =
-            "linear-gradient("
-            + linearDirection.value
-            + ", "
-            + color1.value
-            + ","
-            + color2.value
-            + ")"
-            // + color3.value
-            // + ","
-            // + color4.value
-            // + ")";
+                "linear-gradient("
+                + linearDirection.value
+                + ", "
+                + color1.value
+                + ","
+                + color2.value
+                + ")"
             currentSettings()
         }
 
-document.querySelector('select[name="toDirection"]').onchange=returnColor;
-color1.addEventListener("input", returnColor)
-color2.addEventListener("input", returnColor)
-// color3.addEventListener("input", returnColor)
-// color4.addEventListener("input", returnColor)
+        function changeBrightness(value) {
+            var brightness = parseFloat(bodys.style.filter.replace("brightness(", "").replace(")", ""));
+            if (isNaN(brightness))
+                brightness = 1.0;
+            brightness += value;
+            if (brightness < 0) brightness = 0;
+            if (brightness > 3) brightness = 3;
+            bodys.style.filter = "brightness(" + brightness + ")";
+        }
+
+        document.querySelector('select[name="toDirection"]').onchange = returnColor;
+        color1.addEventListener("input", returnColor)
+        color2.addEventListener("input", returnColor)
+        
+        function handleMouseOver() {
+            changeBrightness(-0.1);
+        }
+
+        function handleMouseOut() {
+            changeBrightness(0.2);
+        }
+
+        bodys.addEventListener("mouseover", handleMouseOver);
+        bodys.addEventListener("mouseout", handleMouseOut);
     </script>
 </body>
 </html>

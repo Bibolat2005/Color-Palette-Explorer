@@ -82,3 +82,13 @@ body {
   width: 130px;
   height: 35px;
  }
+
+ .random-color button {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+/* Добавлены стили для select */
+.random-color select {
+  margin-top: 23px;
+}
