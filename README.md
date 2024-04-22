@@ -10,4 +10,4 @@
 <h3>5.Selection the box to select the angle<br></h3>
 <img width="325" alt="main" src="https://github.com/Bibolat2005/nFactorial-Incubator/assets/122878046/5fd381fa-0c2c-4735-aade-9427778c7e82">
 
-From this task I actually learned more about creation a Gradient Color Generator using HTML CSS JavaScript.Initially, it was a little bit hard in Javascript by doing functions.It was good experince and porject for me.I did it with pleasure and tried my best at short time.Maybe If I had more time, I would do it better.Thank you for giving a chance and wish all best!
+<h2>From this task I actually learned more about creation a Gradient Color Generator using HTML CSS JavaScript.Initially, it was a little bit hard in Javascript by doing functions.It was good experince and porject for me.I did it with pleasure and tried my best at short time.Maybe If I had more time, I would do it better.Thank you for giving a chance and wish all best!<h2>
